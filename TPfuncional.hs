@@ -31,3 +31,8 @@ add procesador = procesador {acumuladorA = acumuladorA procesador + acumuladorB 
 --                |otherwise = procesador {acumuladorA = fromIntegral acumuladorA procesador / fromIntegral acumuladorB procesador}
 
 -- str adress valor procesador = procesador { memoria = take adress (memoria procesador) ++ valor ++ drop  adress (memoria procesador)}
+-- -- -- -- -- -- --
+LINEA 17: -- sumar10y22 = (add procesador).(lodv 22 procesador).(swap procesador).(lodv 10 procesador)
+LINEA 20: -- str adress valor procesador = procesador {memoria = (take (posicionCorregida adress) memoria procesador)++([valor])++(drop adress memoria procesador), contador = contador procesador +1}
+LINEA 22: -- posicionCorregida posicion = posicion-1
+LINEA 21: -- -- lod adress procesador = procesador {memoria = (take (posicionCorregida adress) memoria procesador) ++ ([acumuladorA procesador]) ++ (drop adress memoria procesador), contador = contador procesador +1}
