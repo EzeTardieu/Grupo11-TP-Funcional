@@ -19,7 +19,7 @@ incrementarContador procesador = procesador {programCounter = programCounter pro
 
 
 ---------- 3.2 ----------
-nop procesador = procesador {programCounter = programCounter procesador +1}
+nop = incrementarContador
 aumentarTresPosiciones = nop.nop.nop
 
 ---------- 3.3 ----------
