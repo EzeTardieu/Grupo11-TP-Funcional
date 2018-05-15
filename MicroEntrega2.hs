@@ -56,3 +56,6 @@ prueba434 = procesarInstruccion(divide).procesarInstruccion(lodv 12).procesarIns
 cargarFuncion funcion procesador = procesador {listaDeFunciones = listaDeFunciones(procesador) ++ [funcion]}
 selecccionarFuncion numeroDeFuncion procesador =  (!!) (listaDeFunciones procesador) (numeroDeFuncion - 1)
 ejecutarFuncion procesador funcion = funcion procesador
+
+--3.2
+ejecutarSiguienteFuncion procesador |mensajeError procesador == [] = ejecutarFuncion ( incrementarContador procesador) (head (listaDeFunciones procesador))
